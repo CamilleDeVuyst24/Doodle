@@ -19,7 +19,7 @@ namespace logic {
         virtual ~AbstractFactory() = default;
 
         virtual std::unique_ptr<Player> createPlayer() = 0;
-        virtual std::unique_ptr<Platform> createPlatform(PlatformType type) = 0;
+        virtual std::unique_ptr<logic::Platform> createPlatform(float x, float y) = 0;
         virtual std::unique_ptr<Bonus> createBonus(/* bonus type */) = 0;
     };
 

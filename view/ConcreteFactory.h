@@ -19,7 +19,7 @@ namespace view {
     class ConcreteFactory : public logic::AbstractFactory {
     public:
         std::unique_ptr<logic::Player> createPlayer() override;
-        std::unique_ptr<logic::Platform> createPlatform(logic::PlatformType type) override;
+        std::unique_ptr<logic::Platform> createPlatform(float x, float y) override;
         std::unique_ptr<logic::Bonus> createBonus() override;
         std::unique_ptr<logic::BGTile> createBGTile();
 

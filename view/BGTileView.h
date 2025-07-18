@@ -20,6 +20,7 @@ namespace view {
 
     private:
         logic::BGTile& model;
+        sf::Texture texture;
     };
 
 }

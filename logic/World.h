@@ -11,6 +11,8 @@
 #include "Player.h"
 #include "Platform.h"
 #include "Bonus.h"
+#include "../view/ConcreteFactory.h"
+
 
 
 namespace logic {
@@ -21,14 +23,17 @@ namespace logic {
         void setPlayer(std::unique_ptr<Player> p) { player = std::move(p); }
         Player& getPlayer() { return *player; }
 
-        void addPlatform(std::unique_ptr<Platform> p) {
-            platforms.push_back(std::move(p));
-        }
+        void addPlatform(std::unique_ptr<Platform> p);
+        void setFactory(view::ConcreteFactory* f) { factory = f; }
 
     private:
         std::unique_ptr<Player> player;
-        std::vector<std::unique_ptr<Platform>> platforms;
+        std::vector<std::unique_ptr<Platform >> platforms;
         std::vector<std::unique_ptr<Bonus>> bonuses;
+
+        view::ConcreteFactory* factory = nullptr;
+
+        float highestPlatformY = 0.f;
     };
 
 }

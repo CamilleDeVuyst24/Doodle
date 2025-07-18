@@ -7,8 +7,11 @@
 namespace view {
 
     BGTileView::BGTileView(logic::BGTile& model) : model(model) {
+        if (!texture.loadFromFile("assets/background.png")) {
+            throw std::runtime_error("Failed to load background_tile.png");
+        }
+        sprite.setTexture(texture);
         model.addObserver(this);
-        // sprite.setTexture(...) load background tile texture
     }
 
     void BGTileView::update() {

@@ -8,7 +8,7 @@
 namespace view {
 
     PlayerView::PlayerView(logic::Player& model) : model(model) {
-        if (!texture.loadFromFile("resources/player.png")) {
+        if (!texture.loadFromFile("assets/player.png")) {
             throw std::runtime_error("Failed to load player.png");
         }
         sprite.setTexture(texture);
@@ -16,7 +16,7 @@ namespace view {
     }
 
     void PlayerView::update() {
-        sprite.setPosition(model.getX(), model.getY() - cameraOffsetY);
+        sprite.setPosition(model.getX(), model.getY());
     }
 
 

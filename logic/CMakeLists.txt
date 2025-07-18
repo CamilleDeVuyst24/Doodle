@@ -16,3 +16,13 @@ add_library(logic STATIC
 )
 
 target_include_directories(logic PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+
+find_package(SFML 2.6 REQUIRED COMPONENTS system window graphics network audio)
+
+target_link_libraries(logic PUBLIC
+        sfml-system
+        sfml-window
+        sfml-graphics
+        sfml-audio
+        sfml-network
+)

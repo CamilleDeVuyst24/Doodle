@@ -18,7 +18,9 @@ namespace view {
         void run();
 
     private:
-        sf::RenderWindow window{sf::VideoMode(800, 600), "Jump Game"};
+        sf::RenderWindow window{sf::VideoMode(800, 600), "Doodle Jump"};
+
+
         logic::World world;
         ConcreteFactory factory;
 

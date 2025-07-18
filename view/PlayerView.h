@@ -13,7 +13,7 @@
 
 namespace view {
 
-    class PlayerView : public EntityView, public logic::Observer  {
+    class PlayerView : public EntityView  {
     public:
         PlayerView(logic::Player& model);
         void update() override;

@@ -10,7 +10,17 @@ namespace view {
 
     void Game::run() {
         // init player/platform etc.
-        world.setPlayer(factory.createPlayer()); // example
+        //factory.setWorld(&world);
+
+        factory.createBGTile();
+        world.setFactory(&factory);
+        world.setPlayer(factory.createPlayer());
+        for (int i = 0; i < 10; ++i) {
+            float x = static_cast<float>(std::rand() % 800);
+            float y = 700.f - i * 80.f;
+            world.addPlatform(factory.createPlatform(x, y));
+        }
+
 
         while (window.isOpen()) {
             handleEvents();

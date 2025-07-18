@@ -20,6 +20,7 @@ namespace view {
 
     private:
         logic::Platform& model;
+        sf::Texture texture;
     };
 
 }

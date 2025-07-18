@@ -3,17 +3,20 @@
 //
 
 #include "PlatformView.h"
+#include <stdexcept>
 
 
 
 namespace view {
 
     PlatformView::PlatformView(logic::Platform& model) : model(model) {
-        // Add as observer
+        if (!texture.loadFromFile("assets/platform.png")) {
+            throw std::runtime_error("Failed to load platform.png");
+        }
+        sprite.setTexture(texture);
         model.addObserver(this);
 
-        // sprite.setTexture(...) load platform texture
-        // e.g. sprite.setTexture(platformTexture);
+
     }
 
     void PlatformView::update() {

@@ -16,6 +16,14 @@ namespace logic {
     class Platform : public EntityModel {
     public:
         virtual PlatformType getType() const = 0;
+
+        float getX() const { return x; }
+        float getY() const { return y; }
+        void setPosition(float newX, float newY) { x = newX; y = newY; }
+
+    protected:
+        float x = 0.f;
+        float y = 0.f;
     };
 
     class StaticPlatform : public Platform {

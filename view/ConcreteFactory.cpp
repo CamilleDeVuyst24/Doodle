@@ -24,8 +24,9 @@ namespace view {
         return player;
     }
 
-    std::unique_ptr<logic::Platform> ConcreteFactory::createPlatform(logic::PlatformType type) {
+    std::unique_ptr<logic::Platform> ConcreteFactory::createPlatform(float x, float y) {
         auto platform = std::make_unique<logic::StaticPlatform>();
+        platform->setPosition(x, y);
         entityViews.push_back(std::make_unique<PlatformView>(*platform));
         return platform;
     }
