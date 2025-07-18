@@ -1,0 +1,8 @@
+/Users/camilledevuyst/CLionProjects/Doodle/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/camilledevuyst/CLionProjects/Doodle/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/camilledevuyst/CLionProjects/Doodle/cmake-build-debug/logic/CMakeFiles/logic.dir
+/Users/camilledevuyst/CLionProjects/Doodle/cmake-build-debug/logic/CMakeFiles/edit_cache.dir
+/Users/camilledevuyst/CLionProjects/Doodle/cmake-build-debug/logic/CMakeFiles/rebuild_cache.dir
+/Users/camilledevuyst/CLionProjects/Doodle/cmake-build-debug/view/CMakeFiles/Doodle.dir
+/Users/camilledevuyst/CLionProjects/Doodle/cmake-build-debug/view/CMakeFiles/edit_cache.dir
+/Users/camilledevuyst/CLionProjects/Doodle/cmake-build-debug/view/CMakeFiles/rebuild_cache.dir
